@@ -23,7 +23,7 @@ class IndexCardAPIView(APIView):
         card = dict()
         for user in users:
             weibo_name = user.weibo_name
-            cache_tags = cache.srandmember(weibo_name, 8)
+            cache_tags = cache.srandmember(weibo_name, 5)
             tags = []
             for tag in cache_tags:
                 tags.append(tag)
